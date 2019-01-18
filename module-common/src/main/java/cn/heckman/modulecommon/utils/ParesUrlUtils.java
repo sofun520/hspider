@@ -1,5 +1,7 @@
 package cn.heckman.modulecommon.utils;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,7 +44,7 @@ public class ParesUrlUtils {
         }
         String s = sb.toString();
         if (s.endsWith("&")) {
-            s = org.apache.commons.lang.StringUtils.substringBeforeLast(s, "&");
+            s = StringUtils.substringBeforeLast(s, "&");
         }
         return s;
     }

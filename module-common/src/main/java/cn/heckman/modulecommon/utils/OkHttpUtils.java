@@ -35,6 +35,7 @@ public class OkHttpUtils {
             OkHttpClient okHttpClient = new OkHttpClient();
             final Request request = new Request.Builder()
                     .addHeader("Content-Type","application/json")
+                    .addHeader("Accept","application/json")
                     .url(url)
                     .get()//默认就是GET请求，可以不写
                     .build();

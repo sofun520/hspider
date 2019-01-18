@@ -7,7 +7,6 @@
         <artifactId>framework</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-
     <groupId>cn.heckman</groupId>
     <artifactId>backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -19,15 +18,11 @@
     </properties>
 
     <dependencies>
+
         <!--eureka-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
@@ -55,6 +50,22 @@
             <artifactId>module-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>cn.heckman</groupId>
+            <artifactId>module-mail</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.heckman</groupId>
+            <artifactId>module-sms</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>4.3.7.RELEASE</version>
+        </dependency>
 
     </dependencies>
 
@@ -71,6 +82,7 @@
     </dependencyManagement>
 
     <build>
+        <finalName>backend</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
