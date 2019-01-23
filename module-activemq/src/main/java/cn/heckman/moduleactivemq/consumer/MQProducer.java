@@ -21,7 +21,7 @@ public class MQProducer {
 
     public void sendMessage(String queueName, final String message) {
         try {
-            logger.info("queueName=>{}, message=>{}", queueName, message);
+//            logger.info("queueName=>{}, message=>{}", queueName, message);
             jmsTemplate.convertAndSend(queueName, message);
         } catch (Exception ex) {
             ex.printStackTrace();

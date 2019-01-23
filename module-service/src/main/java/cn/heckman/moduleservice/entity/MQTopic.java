@@ -10,5 +10,6 @@ public class MQTopic {
     public static String SMS_GATEWAY_SENDED_STATUS = "SMS_GATEWAY_SENDED_STATUS";
 
     public static String SMS_REQ = "SMS_REQ";
+    public static String SMS_P2P_REQ = "SMS_P2P_REQ";
     public static String SMS_MT = "SMS_MT";
 }

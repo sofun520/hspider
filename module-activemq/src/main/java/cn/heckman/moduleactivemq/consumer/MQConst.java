@@ -4,5 +4,8 @@ public class MQConst {
 
     public static String VISIT_LOG = "VISIT_LOG";
     public static String SMS_REQ = "SMS_REQ";
+    public static String SMS_REPORT = "SMS_REPORT";
+    public static String EMAIL_RESULT_INSERT = "EMAIL_RESULT_INSERT";
+    public static String SMS_MT = "SMS_MT";
 
 }
