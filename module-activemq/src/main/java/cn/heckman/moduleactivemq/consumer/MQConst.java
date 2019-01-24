@@ -7,5 +7,6 @@ public class MQConst {
     public static String SMS_REPORT = "SMS_REPORT";
     public static String EMAIL_RESULT_INSERT = "EMAIL_RESULT_INSERT";
     public static String SMS_MT = "SMS_MT";
+    public static String SMS_P2P_REQ = "SMS_P2P_REQ";
 
 }

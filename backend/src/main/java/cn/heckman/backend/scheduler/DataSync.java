@@ -20,10 +20,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.jms.annotation.JmsListener;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import javax.jms.JMSException;
+import javax.jms.Session;
+import javax.jms.TextMessage;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -180,4 +184,13 @@ public class DataSync {
         logger.info("==共使用" + ((end - start) / 1000) + "s==");
     }
 
+
+//    @JmsListener(destination = "SMS_P2P_REQ", containerFactory = "jmsQueueListener")
+//    public void smsReq(final TextMessage text, Session session) {
+//        try {
+//            System.out.println(text.getText());
+//        } catch (JMSException ex) {
+//            ex.printStackTrace();
+//        }
+//    }
 }

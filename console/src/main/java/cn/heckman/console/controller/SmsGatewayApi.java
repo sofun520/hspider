@@ -124,7 +124,7 @@ public class SmsGatewayApi extends AbstractPortalController {
             JSONObject re = new JSONObject();
             re.put("taskId", taskId);
             re.put("account", param.getString("account"));
-            re.put("list", param.getJSONArray("list").toJSONString());
+            re.put("list", param.getJSONArray("list"));
 
             //推送到mq，从backend服务入库
             producerService.sendMessage(MQTopic.SMS_P2P_REQ, re.toJSONString());

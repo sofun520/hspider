@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.annotation.EnableJms;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.listener.SimpleMessageListenerContainer;
 
 import javax.jms.DeliveryMode;
 import javax.jms.Queue;
@@ -51,6 +52,7 @@ public class ActiveMQ4Config {
                         "admin",
                         "admin",
                         url + "?jms.prefetchPolicy.queuePrefetch=10");
+//                        url + "?jms.optimizeAcknowledge=true&jms.optimizeAcknowledgeTimeOut=10000");
         activeMQConnectionFactory.setRedeliveryPolicy(redeliveryPolicy);
         return activeMQConnectionFactory;
     }
@@ -59,8 +61,6 @@ public class ActiveMQ4Config {
     public JmsTemplate jmsTemplate(ActiveMQConnectionFactory activeMQConnectionFactory, Queue queue) {
         JmsTemplate jmsTemplate = new JmsTemplate();
         jmsTemplate.setDeliveryMode(DeliveryMode.PERSISTENT);//进行持久化配置 1表示非持久化，2表示持久化
-
-
         jmsTemplate.setConnectionFactory(activeMQConnectionFactory);
         jmsTemplate.setDefaultDestination(queue); //此处可不设置默认，在发送消息时也可设置队列
         jmsTemplate.setSessionAcknowledgeMode(4);//客户端签收模式
