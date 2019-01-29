@@ -61,6 +61,13 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
+        <!-- bdb -->
+        <dependency>
+            <groupId>com.sleepycat</groupId>
+            <artifactId>je</artifactId>
+            <version>5.0.73</version>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
